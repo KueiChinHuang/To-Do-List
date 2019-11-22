@@ -11,6 +11,60 @@ https://www.w3schools.com/howto/howto_js_todolist.asp*/
 }
 
 
+/* Style the list items */
+
+p div {
+  cursor: pointer;
+  position: relative;
+  padding: 5px;
+  font-size: inherit;
+  transition: 0.2s;
+  background: #D5D5D7;
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+/* Darker background-color on hover */
+
+p div:hover {
+  background: #AFAFB0;
+}
+
+p div:hover {
+  background: #AFAFB0;
+}
+
+
+/* Style the delete button */
+
+
+/* Delete button reference:
+  https://stackoverflow.com/questions/22672368/how-to-make-a-transparent-html-button/22672444*/
+
+.delete_btn {
+  color: #065330;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 3px;
+}
+
+.delete_btn:hover {
+  background-color: #D64933;
+  color: white;
+}
+
+
 /* Style the header */
 
 header {
@@ -64,69 +118,6 @@ input#newItem {
 
 .add_btn:hover {
   background-color: #DB9402;
-}
-
-#para1 div {
-  color: #053B22;
-  background: #D5D5D7;
-  text-decoration: initial;
-  font-style: normal;
-}
-
-#para2 div {
-  color: #D2E8DE;
-  background: #8D9697;
-  text-decoration: line-through;
-  font-style: italic;
-}
-
-
-/* Style the list items */
-
-p div {
-  cursor: pointer;
-  position: relative;
-  padding: 5px;
-  font-size: inherit;
-  transition: 0.2s;
-  /* make the list items unselectable */
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-
-/* Darker background-color on hover */
-
-p div:hover {
-  background: #AFAFB0;
-}
-
-
-/* Style the delete button */
-
-
-/* Delete button reference:
-  https://stackoverflow.com/questions/22672368/how-to-make-a-transparent-html-button/22672444*/
-
-.delete_btn {
-  color: #065330;
-  background-color: Transparent;
-  background-repeat: no-repeat;
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-  outline: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 3px;
-}
-
-.delete_btn:hover {
-  background-color: #D64933;
-  color: white;
 }
 
 footer {

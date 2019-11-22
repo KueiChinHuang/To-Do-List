@@ -106,25 +106,37 @@ let remove_from_list = function() {
     };
 };
 
-
+// When a todo is checked
+// change style and move it to the bottom of the list of to-dos.
 let checkedbox_change = function() {
     return function() {
+
         if (this.checked) {
             let change_div = this.parentElement;
             console.log("I've done: ");
             console.log(change_div);
-            //// We can change css either in js or css file
-            // change_div.style.fontStyle = "italic";
-            // change_div.style.textDecoration = "line-through";
-            // change_div.style.color = "grey";
+
+            change_div.style.fontStyle = "italic";
+            change_div.style.textDecoration = "line-through";
+            change_div.style.color = "#D2E8DE";
+            change_div.style.background = "#8D9697";
+            change_div.setAttribute("onmouseover", "this.style.background = '#AFAFB0'");
+            change_div.setAttribute("onmouseout", "this.style.background = '#8D9697'");
+
             add_item_to_top(para2, change_div); // add change_div to the top of para2
+
         } else {
             let change_div = this.parentElement;
             console.log("I haven't done: ");
             console.log(change_div);
-            // change_div.style.fontStyle = "normal";
-            // change_div.style.textDecoration = "initial";
-            // change_div.style.color = "initial";
+
+            change_div.style.fontStyle = "normal";
+            change_div.style.textDecoration = "initial";
+            change_div.style.color = "initial";
+            change_div.style.background = "#D5D5D7";
+            change_div.setAttribute("onmouseover", "this.style.background = '#AFAFB0'");
+            change_div.setAttribute("onmouseout", "this.style.background = '#D5D5D7'");
+
             add_item_to_top(para1, change_div); // add change_div to the top of para1
         }
     };
